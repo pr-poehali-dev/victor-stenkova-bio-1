@@ -129,18 +129,6 @@ export default function Index() {
         </div>
       )}
 
-      {/* RELEASE BANNER */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-md opacity-0" style={{ animation: "fade-up 0.7s ease-out 1.8s forwards" }}>
-        <div className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md">
-          <div className="w-2 h-2 rounded-full bg-green-400 shrink-0" style={{ animation: "pulse 2s infinite" }} />
-          <div className="flex-1 min-w-0">
-            <p className="text-[10px] text-neutral-500 uppercase tracking-widest">Скоро новый релиз</p>
-            <p className="text-white text-sm font-medium truncate">«Скоро лето» — 10 мая</p>
-          </div>
-          <Icon name="Bell" size={15} className="text-neutral-500 shrink-0" />
-        </div>
-      </div>
-
       {/* HERO */}
       <section id="home" className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20">
         <div className="max-w-4xl">
@@ -231,6 +219,16 @@ export default function Index() {
           <h2 className="font-display text-5xl md:text-6xl font-light text-white mb-12">
             Треки
           </h2>
+
+          {/* Upcoming release */}
+          <div className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-neutral-900 border border-neutral-700 mb-8">
+            <div className="w-2 h-2 rounded-full bg-green-400 shrink-0 animate-pulse" />
+            <div className="flex-1">
+              <p className="text-[10px] text-neutral-500 uppercase tracking-widest">Скоро новый релиз</p>
+              <p className="text-white text-sm font-medium">«Скоро лето» — 10 мая</p>
+            </div>
+            <Icon name="Bell" size={15} className="text-neutral-600 shrink-0" />
+          </div>
 
           <div className="space-y-3">
             {TRACKS.map((track, i) => (
