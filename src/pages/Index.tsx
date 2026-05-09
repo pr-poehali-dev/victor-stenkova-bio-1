@@ -175,8 +175,8 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 md:gap-6 pt-2">
-              {[["2", "сингла"], ["50+", "концертов"], ["8+", "лет в музыке"]].map(([n, l]) => (
+            <div className="grid grid-cols-2 gap-4 md:gap-6 pt-2">
+              {[["2", "сингла"], ["3", "года в музыке"]].map(([n, l]) => (
                 <div key={l} className="bg-white rounded-2xl p-5 border border-neutral-100">
                   <p className="text-3xl font-light text-neutral-900 mb-1">{n}</p>
                   <p className="text-xs text-neutral-400">{l}</p>
