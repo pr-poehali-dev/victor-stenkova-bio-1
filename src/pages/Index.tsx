@@ -238,10 +238,11 @@ export default function Index() {
             По вопросам концертов, сотрудничества и другим предложениям.
           </p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mb-12">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 mb-12">
             {[
               { icon: "Send", label: "Telegram", value: "@stencovoyvictor", url: "https://t.me/stencovoyvictor" },
-              { icon: "Mail", label: "Email", value: "victor@email.com", url: "#" },
+              { icon: "Mail", label: "Email", value: "victiusi111@gmail.com", url: "mailto:victiusi111@gmail.com" },
+              { icon: "Phone", label: "Телефон", value: "+7 953 793 00 51", url: "tel:+79537930051" },
               { icon: "Music2", label: "Яндекс Музыка", value: "Слушать треки", url: "https://music.yandex.ru/album/41645898" },
             ].map(({ icon, label, value, url }) => (
               <a
