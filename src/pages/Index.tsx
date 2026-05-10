@@ -189,19 +189,23 @@ export default function Index() {
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="font-display text-5xl md:text-6xl font-light leading-tight text-white mb-6">
+              <h2 className="font-display text-5xl md:text-6xl font-light leading-tight text-white mb-2">
                 Виктор<br />Стенковой
               </h2>
+              <p className="text-neutral-600 text-xs tracking-widest uppercase mb-6">Артист · Блогер · Исполнитель</p>
               <p className="text-neutral-400 leading-relaxed text-sm mb-4">
-                Артист и автор, создающий музыку на стыке жанров. Каждый трек — это честный разговор с теми, кто умеет слушать.
+                Привет! Меня зовут <span className="text-white font-medium">Виктор Стенковой</span> — артист без границ жанров. Поп, денс, танцевальные биты или что-то совсем неожиданное — я пою то, что зажигает.
               </p>
-              <p className="text-neutral-500 leading-relaxed text-sm">
-                Авторские тексты и мелодии, которые остаются с тобой надолго.
+              <p className="text-neutral-500 leading-relaxed text-sm mb-4">
+                Мой девиз простой: любая музыка — на твой вкус. Хочешь поп? Будет поп. Хочешь танцевальный трек, от которого ноги сами идут в пляс? Тоже есть. Я здесь, чтобы создавать то, что ты чувствуешь, а не то, что модно.
+              </p>
+              <p className="text-neutral-600 leading-relaxed text-sm">
+                Помимо музыки — веду блог, делюсь закулисьем творческого процесса и просто живу на полную. Подписывайся, будет интересно.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 md:gap-6 pt-2">
-              {[["2", "сингла"], ["3", "года в музыке"]].map(([n, l]) => (
+              {[["2", "сингла"], ["3", "года в музыке"], ["∞", "жанров"], ["100%", "от души"]].map(([n, l]) => (
                 <div key={l} className="bg-neutral-800 rounded-2xl p-5 border border-neutral-700">
                   <p className="text-3xl font-light text-white mb-1">{n}</p>
                   <p className="text-xs text-neutral-500">{l}</p>
