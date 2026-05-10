@@ -385,9 +385,22 @@ export default function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-neutral-800 py-6 px-6 md:px-12 flex items-center justify-between bg-neutral-950">
-        <p className="text-sm text-neutral-600">Стенковой Виктор — 2026</p>
-        <p className="text-xs text-neutral-700 tracking-widest uppercase">Все права защищены</p>
+      <footer className="border-t border-neutral-800 py-8 px-6 md:px-12 bg-neutral-950">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-neutral-600">Стенковой Виктор — 2026</p>
+          <div className="flex items-center gap-3">
+            <a href="https://t.me/stencovoyvictor" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-neutral-400 hover:text-white">
+              <Icon name="Send" size={14} />
+            </a>
+            <a href="https://www.instagram.com/stenko_viktor?igsh=a3B3MHE2dDU5OTQ4" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-neutral-400 hover:text-white">
+              <Icon name="Instagram" size={14} />
+            </a>
+            <a href="https://youtube.com/@stencovoyvictor?si=BPBnUJd3FdCgB3Mi" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-neutral-400 hover:text-white">
+              <Icon name="Youtube" size={14} />
+            </a>
+          </div>
+          <p className="text-xs text-neutral-700 tracking-widest uppercase">Все права защищены</p>
+        </div>
       </footer>
     </div>
   );
