@@ -80,18 +80,18 @@ export default function Index() {
   ];
 
   return (
-    <div className="bg-neutral-950 text-white font-body min-h-screen overflow-x-hidden">
+    <div className="bg-stone-100 text-stone-900 font-body min-h-screen overflow-x-hidden">
 
       {/* NAV */}
       <nav
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-5 transition-all duration-300"
         style={{
-          background: scrolled ? "rgba(10,10,10,0.92)" : "transparent",
+          background: scrolled ? "rgba(245,244,241,0.92)" : "transparent",
           backdropFilter: scrolled ? "blur(12px)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "1px solid transparent",
+          borderBottom: scrolled ? "1px solid rgba(0,0,0,0.08)" : "1px solid transparent",
         }}
       >
-        <button onClick={() => scrollTo("home")} className="text-sm font-medium text-white">
+        <button onClick={() => scrollTo("home")} className="text-sm font-medium text-stone-900">
           Стенковой Виктор
         </button>
 
@@ -101,7 +101,7 @@ export default function Index() {
               key={id}
               onClick={() => scrollTo(id)}
               className={`text-sm transition-colors duration-200 ${
-                activeSection === id ? "text-white font-medium" : "text-neutral-500 hover:text-neutral-300"
+                activeSection === id ? "text-stone-900 font-medium" : "text-stone-400 hover:text-stone-600"
               }`}
             >
               {label}
@@ -109,19 +109,19 @@ export default function Index() {
           ))}
         </div>
 
-        <button className="md:hidden text-neutral-400" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="md:hidden text-stone-500" onClick={() => setMenuOpen(!menuOpen)}>
           <Icon name={menuOpen ? "X" : "Menu"} size={20} />
         </button>
       </nav>
 
       {/* MOBILE MENU */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-neutral-950 flex flex-col items-center justify-center gap-8">
+        <div className="fixed inset-0 z-40 bg-stone-100 flex flex-col items-center justify-center gap-8">
           {navLinks.map(([id, label]) => (
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className="text-3xl font-medium text-neutral-300 hover:text-white transition-colors"
+              className="text-3xl font-medium text-stone-600 hover:text-stone-900 transition-colors"
             >
               {label}
             </button>
@@ -130,16 +130,16 @@ export default function Index() {
       )}
 
       {/* HERO */}
-      <section id="home" className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20">
+      <section id="home" className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 bg-stone-100">
         <div className="max-w-4xl">
           <p
-            className="text-xs text-neutral-600 tracking-widest uppercase mb-6 opacity-0"
+            className="text-xs text-stone-400 tracking-widest uppercase mb-6 opacity-0"
             style={{ animation: "fade-up 0.6s ease-out 0.2s forwards" }}
           >
             Официальный сайт
           </p>
           <h1
-            className="font-display font-light leading-[1] opacity-0 text-white"
+            className="font-display font-light leading-[1] opacity-0 text-stone-900"
             style={{
               fontSize: "clamp(3.5rem, 12vw, 10rem)",
               animation: "fade-up 0.8s ease-out 0.4s forwards",
@@ -147,11 +147,11 @@ export default function Index() {
             }}
           >
             Стенковой<br />
-            <span className="text-neutral-600">Виктор</span>
+            <span className="text-stone-400">Виктор</span>
           </h1>
 
           <p
-            className="text-neutral-500 text-lg mt-8 mb-10 max-w-md opacity-0"
+            className="text-stone-500 text-lg mt-8 mb-10 max-w-md opacity-0"
             style={{ animation: "fade-up 0.7s ease-out 0.7s forwards" }}
           >
             Авторская музыка. Живые эмоции.
@@ -163,13 +163,13 @@ export default function Index() {
           >
             <button
               onClick={() => scrollTo("music")}
-              className="px-7 py-3 bg-white text-neutral-900 text-sm rounded-full hover:bg-neutral-200 transition-colors duration-200 font-medium"
+              className="px-7 py-3 bg-stone-900 text-stone-100 text-sm rounded-full hover:bg-stone-700 transition-colors duration-200 font-medium"
             >
               Слушать музыку
             </button>
             <button
               onClick={() => scrollTo("about")}
-              className="px-7 py-3 border border-neutral-700 text-neutral-400 text-sm rounded-full hover:border-neutral-500 hover:text-neutral-200 transition-all duration-200"
+              className="px-7 py-3 border border-stone-300 text-stone-500 text-sm rounded-full hover:border-stone-500 hover:text-stone-700 transition-all duration-200"
             >
               Об артисте
             </button>
@@ -177,37 +177,37 @@ export default function Index() {
         </div>
 
         <div className="absolute bottom-10 left-6 md:left-12 flex items-center gap-4">
-          <div className="w-6 h-px bg-neutral-700" />
-          <span className="text-[10px] tracking-[0.3em] uppercase text-neutral-700">Scroll</span>
+          <div className="w-6 h-px bg-stone-300" />
+          <span className="text-[10px] tracking-[0.3em] uppercase text-stone-400">Scroll</span>
         </div>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-28 px-6 md:px-12 bg-neutral-900">
+      <section id="about" className="py-28 px-6 md:px-12 bg-stone-200">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs text-neutral-600 tracking-widest uppercase mb-10">О мне</p>
+          <p className="text-xs text-stone-400 tracking-widest uppercase mb-10">О мне</p>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="font-display text-5xl md:text-6xl font-light leading-tight text-white mb-2">
+              <h2 className="font-display text-5xl md:text-6xl font-light leading-tight text-stone-900 mb-2">
                 Виктор<br />Стенковой
               </h2>
-              <p className="text-neutral-600 text-xs tracking-widest uppercase mb-6">Артист · Блогер · Исполнитель</p>
-              <p className="text-neutral-400 leading-relaxed text-sm mb-4">
-                Привет! Меня зовут <span className="text-white font-medium">Виктор Стенковой</span> — артист без границ жанров. Поп, денс, танцевальные биты или что-то совсем неожиданное — я пою то, что зажигает.
+              <p className="text-stone-400 text-xs tracking-widest uppercase mb-6">Артист · Блогер · Исполнитель</p>
+              <p className="text-stone-600 leading-relaxed text-sm mb-4">
+                Привет! Меня зовут <span className="text-stone-900 font-medium">Виктор Стенковой</span> — артист без границ жанров. Поп, денс, танцевальные биты или что-то совсем неожиданное — я пою то, что зажигает.
               </p>
-              <p className="text-neutral-500 leading-relaxed text-sm mb-4">
+              <p className="text-stone-500 leading-relaxed text-sm mb-4">
                 Мой девиз простой: любая музыка — на твой вкус. Хочешь поп? Будет поп. Хочешь танцевальный трек, от которого ноги сами идут в пляс? Тоже есть. Я здесь, чтобы создавать то, что ты чувствуешь, а не то, что модно.
               </p>
-              <p className="text-neutral-600 leading-relaxed text-sm mb-6">
+              <p className="text-stone-400 leading-relaxed text-sm mb-6">
                 Помимо музыки — веду блог, делюсь закулисьем творческого процесса и просто живу на полную. Подписывайся, будет интересно.
               </p>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 <a
                   href="https://t.me/stencovoyvictor"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-white text-xs font-medium"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-stone-100 border border-stone-300 hover:border-stone-500 hover:bg-stone-50 transition-colors duration-200 text-stone-700 text-xs font-medium"
                 >
                   <Icon name="Send" size={13} />
                   Telegram
@@ -216,7 +216,7 @@ export default function Index() {
                   href="https://www.instagram.com/stenko_viktor?igsh=a3B3MHE2dDU5OTQ4"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-white text-xs font-medium"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-stone-100 border border-stone-300 hover:border-stone-500 hover:bg-stone-50 transition-colors duration-200 text-stone-700 text-xs font-medium"
                 >
                   <Icon name="Instagram" size={13} />
                   Instagram
@@ -225,7 +225,7 @@ export default function Index() {
                   href="https://youtube.com/@stencovoyvictor?si=BPBnUJd3FdCgB3Mi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-white text-xs font-medium"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-stone-100 border border-stone-300 hover:border-stone-500 hover:bg-stone-50 transition-colors duration-200 text-stone-700 text-xs font-medium"
                 >
                   <Icon name="Youtube" size={13} />
                   YouTube
@@ -235,9 +235,9 @@ export default function Index() {
 
             <div className="grid grid-cols-2 gap-4 md:gap-6 pt-2">
               {[["2", "сингла"], ["3", "года в музыке"], ["∞", "жанров"], ["100%", "от души"]].map(([n, l]) => (
-                <div key={l} className="bg-neutral-800 rounded-2xl p-5 border border-neutral-700">
-                  <p className="text-3xl font-light text-white mb-1">{n}</p>
-                  <p className="text-xs text-neutral-500">{l}</p>
+                <div key={l} className="bg-stone-100 rounded-2xl p-5 border border-stone-300">
+                  <p className="text-3xl font-light text-stone-900 mb-1">{n}</p>
+                  <p className="text-xs text-stone-400">{l}</p>
                 </div>
               ))}
             </div>
@@ -246,34 +246,34 @@ export default function Index() {
       </section>
 
       {/* MUSIC */}
-      <section id="music" className="py-28 px-6 md:px-12 bg-neutral-950">
+      <section id="music" className="py-28 px-6 md:px-12 bg-stone-100">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs text-neutral-600 tracking-widest uppercase mb-10">Музыка</p>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-white mb-12">
+          <p className="text-xs text-stone-400 tracking-widest uppercase mb-10">Музыка</p>
+          <h2 className="font-display text-5xl md:text-6xl font-light text-stone-900 mb-12">
             Треки
           </h2>
 
           {/* Upcoming release */}
-          <div className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-neutral-900 border border-neutral-700 mb-8">
-            <div className="w-2 h-2 rounded-full bg-green-400 shrink-0 animate-pulse" />
+          <div className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-stone-200 border border-stone-300 mb-8">
+            <div className="w-2 h-2 rounded-full bg-green-500 shrink-0 animate-pulse" />
             <div className="flex-1">
-              <p className="text-[10px] text-neutral-500 uppercase tracking-widest">Скоро новый релиз</p>
-              <p className="text-white text-sm font-medium">«Скоро лето» — 11 мая</p>
+              <p className="text-[10px] text-stone-400 uppercase tracking-widest">Скоро новый релиз</p>
+              <p className="text-stone-800 text-sm font-medium">«Скоро лето» — 11 мая</p>
             </div>
-            <Icon name="Bell" size={15} className="text-neutral-600 shrink-0" />
+            <Icon name="Bell" size={15} className="text-stone-400 shrink-0" />
           </div>
 
           <div className="space-y-3">
             {TRACKS.map((track, i) => (
               <div
                 key={track.id}
-                className="flex items-center justify-between p-5 rounded-2xl bg-neutral-900 hover:bg-neutral-800 transition-colors duration-200 border border-neutral-800 hover:border-neutral-700"
+                className="flex items-center justify-between p-5 rounded-2xl bg-stone-200 hover:bg-stone-300 transition-colors duration-200 border border-stone-300 hover:border-stone-400"
               >
                 <div className="flex items-center gap-5">
-                  <span className="text-neutral-700 text-sm w-5">{i + 1}</span>
+                  <span className="text-stone-400 text-sm w-5">{i + 1}</span>
                   <div>
-                    <p className="font-medium text-white text-base">{track.title}</p>
-                    <p className="text-xs text-neutral-600 mt-0.5 flex items-center gap-1">
+                    <p className="font-medium text-stone-900 text-base">{track.title}</p>
+                    <p className="text-xs text-stone-400 mt-0.5 flex items-center gap-1">
                       <Icon name="Music2" size={10} />
                       Яндекс Музыка
                     </p>
@@ -284,7 +284,7 @@ export default function Index() {
                   href={track.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 bg-white text-neutral-900 text-xs rounded-full hover:bg-neutral-200 transition-colors duration-200 font-medium"
+                  className="flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-stone-100 text-xs rounded-full hover:bg-stone-700 transition-colors duration-200 font-medium"
                 >
                   <Icon name="Play" size={11} />
                   Слушать
@@ -296,13 +296,13 @@ export default function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-28 px-6 md:px-12 bg-neutral-900">
+      <section id="contact" className="py-28 px-6 md:px-12 bg-stone-200">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs text-neutral-600 tracking-widest uppercase mb-10">Контакты</p>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-white mb-4">
+          <p className="text-xs text-stone-400 tracking-widest uppercase mb-10">Контакты</p>
+          <h2 className="font-display text-5xl md:text-6xl font-light text-stone-900 mb-4">
             Напишите мне
           </h2>
-          <p className="text-neutral-500 text-sm mb-12 max-w-md">
+          <p className="text-stone-500 text-sm mb-12 max-w-md">
             По вопросам концертов, сотрудничества и другим предложениям.
           </p>
 
@@ -318,31 +318,31 @@ export default function Index() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col gap-3 p-5 bg-neutral-800 rounded-2xl border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-750 transition-all duration-200 group"
+                className="flex flex-col gap-3 p-5 bg-stone-100 rounded-2xl border border-stone-300 hover:border-stone-400 hover:bg-stone-50 transition-all duration-200 group"
               >
-                <div className="w-9 h-9 bg-neutral-700 group-hover:bg-neutral-600 rounded-xl flex items-center justify-center transition-colors">
-                  <Icon name={icon} size={15} className="text-neutral-300" />
+                <div className="w-9 h-9 bg-stone-200 group-hover:bg-stone-300 rounded-xl flex items-center justify-center transition-colors">
+                  <Icon name={icon} size={15} className="text-stone-600" />
                 </div>
                 <div>
-                  <p className="text-xs text-neutral-600 mb-0.5">{label}</p>
-                  <p className="text-sm font-medium text-neutral-200">{value}</p>
+                  <p className="text-xs text-stone-400 mb-0.5">{label}</p>
+                  <p className="text-sm font-medium text-stone-700">{value}</p>
                 </div>
               </a>
             ))}
           </div>
 
           {/* FORM */}
-          <div className="bg-neutral-800 rounded-2xl border border-neutral-700 p-7">
-            <h3 className="text-base font-medium text-white mb-5">Форма обратной связи</h3>
+          <div className="bg-stone-100 rounded-2xl border border-stone-300 p-7">
+            <h3 className="text-base font-medium text-stone-900 mb-5">Форма обратной связи</h3>
 
             {sent ? (
               <div className="flex items-center gap-3 py-6">
-                <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
-                  <Icon name="Check" size={18} className="text-green-400" />
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <Icon name="Check" size={18} className="text-green-600" />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Сообщение отправлено!</p>
-                  <p className="text-neutral-500 text-sm">Виктор скоро ответит вам.</p>
+                  <p className="text-stone-900 font-medium">Сообщение отправлено!</p>
+                  <p className="text-stone-500 text-sm">Виктор скоро ответит вам.</p>
                 </div>
               </div>
             ) : (
@@ -353,14 +353,14 @@ export default function Index() {
                     placeholder="Ваше имя"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="bg-neutral-900 border border-neutral-700 text-white placeholder-neutral-600 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-neutral-500 transition-colors"
+                    className="bg-stone-200 border border-stone-300 text-stone-900 placeholder-stone-400 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-stone-500 transition-colors"
                   />
                   <input
                     type="email"
                     placeholder="Email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="bg-neutral-900 border border-neutral-700 text-white placeholder-neutral-600 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-neutral-500 transition-colors"
+                    className="bg-stone-200 border border-stone-300 text-stone-900 placeholder-stone-400 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-stone-500 transition-colors"
                   />
                 </div>
                 <textarea
@@ -368,15 +368,15 @@ export default function Index() {
                   rows={4}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full bg-neutral-900 border border-neutral-700 text-white placeholder-neutral-600 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-neutral-500 transition-colors mb-4 resize-none"
+                  className="w-full bg-stone-200 border border-stone-300 text-stone-900 placeholder-stone-400 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-stone-500 transition-colors resize-none mb-3"
                 />
-                {formError && <p className="text-red-400 text-xs mb-3">{formError}</p>}
+                {formError && <p className="text-red-500 text-xs mb-3">{formError}</p>}
                 <button
                   onClick={handleSubmit}
                   disabled={sending}
-                  className="px-7 py-3 bg-white text-neutral-900 text-sm rounded-full hover:bg-neutral-200 transition-colors duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-3 bg-stone-900 text-stone-100 text-sm rounded-full hover:bg-stone-700 transition-colors duration-200 font-medium disabled:opacity-50"
                 >
-                  {sending ? "Отправляем..." : "Отправить"}
+                  {sending ? "Отправляю..." : "Отправить"}
                 </button>
               </>
             )}
@@ -385,21 +385,21 @@ export default function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-neutral-800 py-8 px-6 md:px-12 bg-neutral-950">
+      <footer className="border-t border-stone-300 py-8 px-6 md:px-12 bg-stone-100">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-neutral-600">Стенковой Виктор — 2026</p>
+          <p className="text-sm text-stone-400">Стенковой Виктор — 2026</p>
           <div className="flex items-center gap-3">
-            <a href="https://t.me/stencovoyvictor" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-neutral-400 hover:text-white">
+            <a href="https://t.me/stencovoyvictor" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-stone-200 border border-stone-300 hover:border-stone-400 hover:bg-stone-300 transition-colors duration-200 text-stone-500 hover:text-stone-800">
               <Icon name="Send" size={14} />
             </a>
-            <a href="https://www.instagram.com/stenko_viktor?igsh=a3B3MHE2dDU5OTQ4" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-neutral-400 hover:text-white">
+            <a href="https://www.instagram.com/stenko_viktor?igsh=a3B3MHE2dDU5OTQ4" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-stone-200 border border-stone-300 hover:border-stone-400 hover:bg-stone-300 transition-colors duration-200 text-stone-500 hover:text-stone-800">
               <Icon name="Instagram" size={14} />
             </a>
-            <a href="https://youtube.com/@stencovoyvictor?si=BPBnUJd3FdCgB3Mi" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-neutral-400 hover:text-white">
+            <a href="https://youtube.com/@stencovoyvictor?si=BPBnUJd3FdCgB3Mi" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full bg-stone-200 border border-stone-300 hover:border-stone-400 hover:bg-stone-300 transition-colors duration-200 text-stone-500 hover:text-stone-800">
               <Icon name="Youtube" size={14} />
             </a>
           </div>
-          <p className="text-xs text-neutral-700 tracking-widest uppercase">Все права защищены</p>
+          <p className="text-xs text-stone-400 tracking-widest uppercase">Все права защищены</p>
         </div>
       </footer>
     </div>
