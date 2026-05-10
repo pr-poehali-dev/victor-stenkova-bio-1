@@ -199,9 +199,29 @@ export default function Index() {
               <p className="text-neutral-500 leading-relaxed text-sm mb-4">
                 Мой девиз простой: любая музыка — на твой вкус. Хочешь поп? Будет поп. Хочешь танцевальный трек, от которого ноги сами идут в пляс? Тоже есть. Я здесь, чтобы создавать то, что ты чувствуешь, а не то, что модно.
               </p>
-              <p className="text-neutral-600 leading-relaxed text-sm">
+              <p className="text-neutral-600 leading-relaxed text-sm mb-6">
                 Помимо музыки — веду блог, делюсь закулисьем творческого процесса и просто живу на полную. Подписывайся, будет интересно.
               </p>
+              <div className="flex gap-3">
+                <a
+                  href="https://t.me/stencovoyvictor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-white text-xs font-medium"
+                >
+                  <Icon name="Send" size={13} />
+                  Telegram
+                </a>
+                <a
+                  href="https://www.instagram.com/stenko_viktor?igsh=a3B3MHE2dDU5OTQ4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-white text-xs font-medium"
+                >
+                  <Icon name="Instagram" size={13} />
+                  Instagram
+                </a>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4 md:gap-6 pt-2">
