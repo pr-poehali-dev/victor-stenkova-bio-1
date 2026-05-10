@@ -225,7 +225,7 @@ export default function Index() {
             <div className="w-2 h-2 rounded-full bg-green-400 shrink-0 animate-pulse" />
             <div className="flex-1">
               <p className="text-[10px] text-neutral-500 uppercase tracking-widest">Скоро новый релиз</p>
-              <p className="text-white text-sm font-medium">«Скоро лето» — 10 мая</p>
+              <p className="text-white text-sm font-medium">«Скоро лето» — 11 мая</p>
             </div>
             <Icon name="Bell" size={15} className="text-neutral-600 shrink-0" />
           </div>
