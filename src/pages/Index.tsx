@@ -221,6 +221,15 @@ export default function Index() {
                   <Icon name="Instagram" size={13} />
                   Instagram
                 </a>
+                <a
+                  href="https://youtube.com/@stencovoyvictor?si=BPBnUJd3FdCgB3Mi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-neutral-800 border border-neutral-700 hover:border-neutral-500 hover:bg-neutral-700 transition-colors duration-200 text-white text-xs font-medium"
+                >
+                  <Icon name="Youtube" size={13} />
+                  YouTube
+                </a>
               </div>
             </div>
 
